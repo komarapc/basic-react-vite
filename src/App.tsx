@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// import { MyComponent } from "./components/MyComponents";
+import { MyComponent } from "./components/MyComponents";
 
 // prarent component
 export default function App() {
@@ -17,7 +17,9 @@ export default function App() {
     <>
       <h1>Hello, world!sss</h1>
       <h2>Start editing to see some magic happen!</h2>
-      {/* <MyComponent counter={count} onClick={() => setCount(count + 1)} /> */}
+
+      {/* passing data into child component */}
+      <MyComponent counter={count} onClick={() => setCount(count + 1)} />
       <button onClick={() => setCount(count + 1)}>Count {count}</button>
     </>
   );

@@ -12,8 +12,16 @@ export const MyComponent = (props: Props) => {
         <h1>My Component</h1>
       </div>
       <p>This is my component</p>
-      <p>Counter: {counter}</p>
+      <Counter count={counter} />
       <button onClick={onClick}>click me</button>
+    </>
+  );
+};
+
+const Counter = ({ count }: { count: number }) => {
+  return (
+    <>
+      <p>You clicked {count} times</p>
     </>
   );
 };
